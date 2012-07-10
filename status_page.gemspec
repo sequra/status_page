@@ -7,11 +7,10 @@ require "status_page/version"
 Gem::Specification.new do |s|
   s.name        = "status_page"
   s.version     = StatusPage::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of StatusPage."
-  s.description = "TODO: Description of StatusPage."
+  s.authors     = ["Petter Remen"]
+  s.email       = ["petter.remen@gmail.com"]
+  s.homepage    = "github.com/remen/status_page"
+  s.summary     = "A very simplistic engine for a rails status page"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
