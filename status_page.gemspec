@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "status_page"
   s.version     = StatusPage::VERSION
   s.authors     = ["Petter Remen"]
-  s.email       = ["petter.remen@gmail.com"]
-  s.homepage    = "http://github.com/remen/status_page"
+  s.email       = ["petter@spnab.com"]
+  s.homepage    = "http://github.com/spnab/status_page"
   s.summary     = "A very simplistic engine for a rails status page"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile"]
