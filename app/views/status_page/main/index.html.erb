@@ -1,0 +1,15 @@
+<h1>Status: <%= @status.one_word_summary %></h1>
+
+<% if @status.errors.any? -%>
+  <h2>Error</h2>
+  <%- @status.errors.each do |error| -%>
+    <p><%= error %></p>
+  <%- end -%>
+<% end -%>
+
+<% if @status.warnings.any? -%>
+  <h2>Warning</h2>
+  <%- @status.warnings.each do |warning| -%>
+    <p><%= warning %></p>
+  <%- end -%>
+<% end -%>

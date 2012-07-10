@@ -1,0 +1,3 @@
+StatusPage.checks += [
+  StatusPage::ActiveRecordStatus
+]
