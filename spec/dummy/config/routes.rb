@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-
-  mount StatusPage::Engine => "/status_page"
+  scope :module => "status_page" do
+    match "/status" => "main#index"
+  end
 end
