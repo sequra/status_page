@@ -18,7 +18,7 @@ module StatusPage
   describe ApplicationStatus do
     describe "#check" do
       it "runs checks for all classes registered in StatusPage.checks" do
-        StatusPage.stub!(:checks).and_return([MockStatus1, MockStatus2])
+        StatusPage.stub!(:checks).and_return(["StatusPage::MockStatus1", "StatusPage::MockStatus2"])
         status = ApplicationStatus.check
         status.errors.sort.should == ["mock error 1", "mock error 2"]
         status.warnings.sort.should == ["mock warning 1", "mock warning 2"]
