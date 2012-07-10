@@ -5,7 +5,7 @@ module StatusPage
       StatusPage.checks.each do |klass|
         status = klass.check
         @errors   += status.errors
-        @warnings += status.errors
+        @warnings += status.warnings
       end
     end
 
