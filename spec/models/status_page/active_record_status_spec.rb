@@ -4,7 +4,7 @@ module StatusPage
   describe ActiveRecordStatus do
     describe "#check" do
       it "fails if we cannot perform SQL queries" do
-        ActiveRecord::Base.connection.should_receive(:execute).and_raise("some error")
+        ActiveRecord::Base.connection.should_receive(:tables).and_raise("some error")
         ActiveRecordStatus.check.errors.should == ["Unable to reach database."]
       end
       it "succeeds otherwise" do

@@ -3,7 +3,7 @@ module StatusPage
     def check
       super
       begin
-        ActiveRecord::Base.connection.execute("SELECT 0")
+        ActiveRecord::Base.connection.tables
       rescue => e
         @errors << "Unable to reach database."
       end
