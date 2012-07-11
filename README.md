@@ -7,9 +7,8 @@ status checks
 How to use
 ----------
 
-{% highlight ruby %}
-
-# app/models/my_status.rb
+`app/models/my_status.rb`
+```ruby
 class MyStatus < StatusPage::Status
   def check
     if some_error_condition
@@ -20,19 +19,20 @@ class MyStatus < StatusPage::Status
     end
   end
 end
+```
 
-# config/initializers/status_page.rb
+`config/initializers/status_page.rb`
+```ruby
 StatusPage.checks += [
   "StatusPage::ActiveRecordStatus",    # checks database connection
   "MyStatus"
 ]
+```
 
-# config/routes.rb
-#
+`config/routes.rb`
+```ruby
 # Route /status to StatusPage::MainController#index
-
 scope :module => :status_page do
   get "/status" => "main#index"
 end
-
-{% endhighlight %}
+```
