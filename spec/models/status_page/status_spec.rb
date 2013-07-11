@@ -9,8 +9,8 @@ module StatusPage
 
       it "the Status object has run all checks" do
         status = Status.new
-        status.stub!(:errors).and_return(["I've made a huge mistake"])
-        Status.stub!(:new).and_return(status)
+        status.stub(:errors).and_return(["I've made a huge mistake"])
+        Status.stub(:new).and_return(status)
         status.should_receive(:check)
         Status.check.errors.should == ["I've made a huge mistake"]
       end
